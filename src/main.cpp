@@ -110,7 +110,7 @@ bool create_entities() {
   rosidl_runtime_c__String__Sequence__init(&traj_msg.joint_names, NUM_SERVOS);
   char tmp[16];
   for (uint8_t i = 0; i < NUM_SERVOS; i++) {
-    sprintf(tmp, "servo_%u", i + 1);
+    sprintf(tmp, "joint%u", i + 1);
     rosidl_runtime_c__String__assign(&traj_msg.joint_names.data[i], tmp);
   }
 
